@@ -18,7 +18,7 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
-  block-size: 800px;
+  min-height: 800px;
 }
 
 h1,
@@ -56,6 +56,8 @@ ol {
   align-items: end;
   gap: 30px;
   inline-size: 1140px;
+  justify-self: center;
+  align-self: center;  
 }
 
 .result {
@@ -76,11 +78,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.preloader-template {
-  position: absolute;
-  z-index: 1;
+  object-position: center;
 }
 
 .search-form {
@@ -131,6 +129,7 @@ ol {
   font-size: 18px;
   background: transparent;
   min-inline-size: 225px;
+  height: 27px;
   appearance: none;
 }
 
@@ -140,10 +139,6 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__textfield:active:focus-visible {
-  border: 1px solid #fff;
 }
 
 .search-form__checkbox-list {
@@ -191,6 +186,7 @@ ol {
 
 .button:active {
   background: #545050;
+  text-decoration: none;
 }
 
 .button:focus {
@@ -209,11 +205,12 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 24px;
   block-size: 534px;
 }
 
 .title {
+  padding-top: 2px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -232,11 +229,6 @@ ol {
   position: relative;
 }
 
-.preloader-template {
-  position: absolute;
-  z-index: 1;
-}
-
 .content__list-container::-webkit-scrollbar {
   inline-size: 4px;
 }
@@ -252,7 +244,12 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  position: relative;
+}
+
+.content__list-item {
+  padding: 0 3px;
 }
 
 .content__list-item:last-child {
@@ -261,13 +258,13 @@ ol {
 
 .content__card-link {
   display: block;
-  margin: 2px;
   color: inherit;
   text-decoration: none;
 }
 
 .content__card-link:active {
   background: #545050;
+  text-decoration: none;
 }
 
 .content__card-link:hover {
@@ -291,7 +288,6 @@ ol {
   display: flex;
   align-items: start;
   gap: 10px;
-  padding: 2px;
 }
 
 .content__video-card-description-container {
@@ -305,7 +301,7 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 1;
+  line-height: 1.1;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
